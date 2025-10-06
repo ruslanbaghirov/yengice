@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yengice Flower Shop - Fresh Flowers Delivered</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>🌸 Yengice Flower Shop</h1>
+                <p class="tagline">Fresh flowers delivered to your door</p>
+            </div>
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒 Cart (<span id="cart-count">0</span>)
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Welcome to Our Flower Shop</h2>
+            <p>Discover our beautiful collection of fresh flowers for every occasion</p>
+        </section>
+
+        <section class="products">
+            <h2>Our Flowers</h2>
+            <div class="product-grid" id="product-grid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+        </section>
+
+        <section class="about">
+            <h2>About Us</h2>
+            <p>Yengice Flower Shop has been providing fresh, beautiful flowers for over 10 years. We source our flowers from local growers and ensure they arrive fresh at your doorstep.</p>
+        </section>
+
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Shopping Cart</h2>
+                <span class="close" onclick="toggleCart()">&times;</span>
+            </div>
+            <div id="cart-items" class="cart-items">
+                <!-- Cart items will be loaded here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Total: $<span id="cart-total">0.00</span></strong>
+                </div>
+                <button class="btn btn-primary" onclick="checkout()">Checkout</button>
+                <button class="btn btn-secondary" onclick="clearCart()">Clear Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Yengice Flower Shop. All rights reserved.</p>
+            <p>Contact: info@yengice.com | Phone: (555) 123-4567</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
